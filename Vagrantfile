@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
     proxysql.vm.hostname = "proxysql"
     proxysql.vm.network "private_network", ip: "192.168.50.30"
     proxysql.vm.provision "shell", path: "scripts/proxysql.sh"
+    proxysql.vm.provision "shell", path: "scripts/proxysql_config.sh"
   end
   
   # MySQL Master
